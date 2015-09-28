@@ -4,6 +4,7 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 
 import com.wesleyreisz.rockpaperscissors.Game.GameType;
+import com.wesleyreisz.rockpaperscissors.Game.Lizard;
 import com.wesleyreisz.rockpaperscissors.Game.Paper;
 import com.wesleyreisz.rockpaperscissors.Game.Rock;
 import com.wesleyreisz.rockpaperscissors.Game.Scissors;
@@ -11,7 +12,7 @@ import com.wesleyreisz.rockpaperscissors.Game.Scissors;
 import java.util.Random;
 
 /**
- * Created by wesleyreisz on 9/13/15.
+ * Edited by Bradley Erickson on 9/25/15.
  */
 public class GameUtils {
     public static final String BEATS = "beats";
@@ -37,8 +38,12 @@ public class GameUtils {
             return R.drawable.rock;
         }else if (buttonChoice==R.id.btnPaper){
             return R.drawable.paper;
-        }else{
+        }else if (buttonChoice==R.id.btnScissors){
             return R.drawable.scissors;
+        }else if (buttonChoice==R.id.btnLizard){
+            return R.mipmap.lizard;
+        }else{
+            return R.mipmap.spock;
         }
     }
 
@@ -49,10 +54,13 @@ public class GameUtils {
             gameType = new Rock();
         }else if  (playerSelectedChoice==R.id.btnPaper){
             gameType = new Paper();
-        }else{
+        }else if (playerSelectedChoice==R.id.btnScissors){
             gameType = new Scissors();
-        }
-        return gameType.eval(computerSelectedChoice);
+        }else if (playerSelectedChoice==R.id.btnLizard) {
+            gameType = new Lizard();
+        }else{
+            gameType = new Spock();
+        }return gameType.eval(computerSelectedChoice);
     }
 
     public static int defineTextColor(String msg) {
