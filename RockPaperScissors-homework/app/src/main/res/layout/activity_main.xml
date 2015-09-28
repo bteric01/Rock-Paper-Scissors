@@ -35,4 +35,24 @@
         android:layout_below="@id/btnPaper"
         />
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLizzard"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_toLeftOf="@id/btnPaper"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/lizard"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSpock"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_toRightOf="@id/btnPaper"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/spock"
+        />
+
 </RelativeLayout>
