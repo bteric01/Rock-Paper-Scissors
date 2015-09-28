@@ -8,6 +8,7 @@ import com.wesleyreisz.rockpaperscissors.Game.Lizard;
 import com.wesleyreisz.rockpaperscissors.Game.Paper;
 import com.wesleyreisz.rockpaperscissors.Game.Rock;
 import com.wesleyreisz.rockpaperscissors.Game.Scissors;
+import com.wesleyreisz.rockpaperscissors.Game.Spock;
 
 import java.util.Random;
 
